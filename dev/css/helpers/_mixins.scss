@@ -1,0 +1,39 @@
+// responsive
+$mobile:425px;
+$tablet: 990px;
+$laptop: 1024px;
+$desktop: 1920px;
+
+@mixin mobile {
+    @media screen and (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (max-width: $tablet) {
+        @content;
+    }
+}
+
+@mixin laptop {
+    @media screen and (max-width: $laptop) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (max-width: $desktop) {
+        @content;
+    }
+}
+
+//GRID
+
+@mixin grid($columns, $rows, $gap:0) {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    grid-gap: $gap;
+}
