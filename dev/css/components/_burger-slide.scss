@@ -1,0 +1,21 @@
+.burger-slide {
+    @include flex($direction:column);
+    width: 20%;
+    height: 100vh;
+    background: white;
+    position: fixed;
+    right: 0;
+
+    .burger-gallery {
+        text-align: center;
+        .gallery {
+            @include grid($columns:3,$rows:3,$gap:10px);
+        }
+        a {
+            width: 80px;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}

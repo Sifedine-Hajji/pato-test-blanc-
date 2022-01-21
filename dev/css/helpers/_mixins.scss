@@ -1,3 +1,63 @@
+// Flex
+@mixin flex ($display: flex, $direction: row, $justify: center, $align: center) {
+    display: $display;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flex-center-column {
+    @include flex-center;
+    flex-direction: column;
+}
+
+@mixin flex-center-vert {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flex-center-horiz {
+    display: flex;
+    justify-content: center;
+}
+
+
+//GRID
+@mixin grid($columns, $rows, $gap:0) {
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template-columns: repeat($columns, 1fr);
+    grid-template-rows: repeat($rows, 1fr);
+    grid-gap: $gap;
+}
+
+@mixin abs-position ($top, $right, $bottom, $left) {
+    position: absolute;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin vertical-center {
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
 // responsive
 $mobile:425px;
 $tablet: 990px;
@@ -26,14 +86,4 @@ $desktop: 1920px;
     @media screen and (max-width: $desktop) {
         @content;
     }
-}
-
-//GRID
-
-@mixin grid($columns, $rows, $gap:0) {
-    display: grid;
-    grid-auto-flow: dense;
-    grid-template-columns: repeat($columns, 1fr);
-    grid-template-rows: repeat($rows, 1fr);
-    grid-gap: $gap;
 }

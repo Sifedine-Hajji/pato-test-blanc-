@@ -1,0 +1,63 @@
+nav {
+    @include flex($justify:space-between);
+    height: 115px;
+
+    a {
+        color: white;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:hover {
+            color: $primary-color;
+            transition: .3s all ease-in-out;
+        }
+    }
+
+    .nav-links {
+        width: 70%;
+        @include flex($justify:space-around);
+
+        a {
+            padding: 15px;
+        }
+    }
+
+    .socials-and-burger {
+        @include flex($justify:space-around);
+
+        .nav-socials {
+            margin: 0 20px 0 0;
+            a {
+                padding: 5px 8px;
+            }
+        }
+        .menu-burger {
+            @include flex($direction:column);
+            cursor: pointer;
+            width: 30px;
+            height: 15px;
+
+            div {
+                &:nth-child(1) {
+                    width: 25px;
+                    height: 2px;
+                    background: white;
+                    margin: 0 0 5px;
+                }
+
+                &:nth-child(2) {
+                    width: 25px;
+                    height: 2px;
+                    background: white;
+                    margin: 5px 0 0;
+                }
+            }
+
+            &:hover div {
+                background: $primary-color;
+                transition: .3s all ease-in-out;
+            }
+        }
+    }
+
+}

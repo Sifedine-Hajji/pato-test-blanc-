@@ -1,5 +1,14 @@
-.btn {
+.btn-white {
     color: $primary-color;
     background: white;
-    padding: 10px;
+    padding: 13px 25px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+
+    &:hover {
+        color: white;
+        background: $primary-color;
+        transition: 0.3s all ease-in-out;
+    }
 }

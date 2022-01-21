@@ -1,1 +1,21 @@
+.hero-banner {
+    @include flex($direction:column);
+    background: url('../assets/img/slide1-01.jpg')no-repeat center/cover;
+    height: 100vh;
+    width: 100%;
+    color: white;
 
+    span {
+        font-family: 'Courgette', cursive;
+        font-size: 60px;
+        line-height: 66px;
+    }
+    h2 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 90px;
+        font-weight: 700;
+        letter-spacing: 10px;
+        line-height: 99px;
+        margin: 0 0 37px;
+    }
+}
