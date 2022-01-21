@@ -1,3 +1,29 @@
 .wrapper {
-    
+    width: 80%;
+    margin: 0 auto;
+}
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+a {
+    text-decoration: none;
+}
+.over-title {
+    font-family: 'Courgette', cursive;
+    font-size: 30px;
+    line-height: 36px;
+    color: $primary-color;
+}
+.title {
+    font-family: 'Poppins', sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    color: $secundary-color;
+}
+h4 {
+    font-family: 'Poppins', sans-serif;
 }
