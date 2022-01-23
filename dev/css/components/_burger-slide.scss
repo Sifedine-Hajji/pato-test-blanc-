@@ -4,18 +4,58 @@
     height: 100vh;
     background: white;
     position: fixed;
-    right: 0;
+    right: -100%;
+    transition: .8s all ease-in-out;
+
+    a {
+        text-transform: uppercase;
+    }
+
+    .burger-navlinks {
+        @include flex($direction:column);
+        width: 100%;
+        a {
+            color: black;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            
+            &:hover {
+                color: $primary-color;
+                transition: .3s all ease-in-out;
+            }
+        }
+
+    }
+
+    .res {
+        margin: 30px 0 50px;
+    }
 
     .burger-gallery {
         text-align: center;
-        .gallery {
-            @include grid($columns:3,$rows:3,$gap:10px);
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 3px;
         }
+
+        .gallery {
+            @include grid($columns:3, $rows:3, $gap:10px);
+        }
+
         a {
             width: 80px;
+
             img {
                 width: 100%;
             }
         }
     }
+}
+.burger-slide.active {
+    right: 0;
+    transition: .8s all ease-in-out;
 }
