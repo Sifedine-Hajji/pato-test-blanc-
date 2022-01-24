@@ -19,3 +19,107 @@
         margin: 0 0 37px;
     }
 }
+
+// OUR STORY
+.our-story {
+    background: url('../assets/img/pattern1.png');
+    padding: 120px 0 105px;
+    display: flex;
+    justify-content: center;
+
+    .left-ct {
+        @include flex-center-column;
+        width: 30%;
+        margin-right: 60px;
+
+        p {
+            margin-top: 0;
+            text-align: center;
+            font-size: 15px;
+            margin: 0 29px 22px;
+        }
+
+        a {
+            color: black;
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+    }
+
+    .right-ct {
+        margin-left: 60px;
+        overflow: hidden;
+        border-radius: 10px;
+
+        img {
+            width: 390px;
+            height: 100%;
+        }
+
+        &:hover img {
+            transform: scale(1.1);
+            transition: .5s all ease-in-out;
+        }
+    }
+}
+
+// DISCOVER SECTION
+.discover {
+    background: url('../../assets/img/bg-intro-01.jpg') no-repeat center/cover fixed;
+    padding: 135px 0 158px;
+    text-align: center;
+    @include flex-center-column;
+
+    .title {
+        color: white;
+        margin: 0;
+    }
+}
+
+// LEARN MORE SECTION
+.learn-more {
+    @include grid($columns:3,$rows:1,$gap:20px);
+    padding: 77px 0 133px;
+
+    .card {
+        .img-ct {
+            border-radius: 10px;
+            overflow: hidden;
+            margin: 30px 10px 35px;
+            img {
+                width: 100%;
+                border-radius: 10px;
+            }
+            &:hover img {
+                transform: scale(1.1);
+                transition: .3s all ease-in-out ;
+            }
+        }
+
+        h4 {
+            text-transform: uppercase;
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            color: #333333;
+        }
+
+        p {
+            font-size: 15px;
+            color: #666666;
+            margin: 0 0 20px 0;
+        }
+
+        a {
+            text-transform: uppercase;
+            color: #222222;
+            font-size: 12px;
+            letter-spacing: 1px;
+
+            &:hover {
+                color: $primary-color;
+                transition: .3s all ease-in-out;
+            }
+        }
+    }
+}
