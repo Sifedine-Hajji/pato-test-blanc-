@@ -68,12 +68,40 @@ const navColorChanging = () => {
     posScrollPre = posScrollNow;
   };
 };
+// DATE TIMER
+const eventTimer = () => {
+  let eventDays = document.querySelector(".days");
+  let eventHours = document.querySelector(".hours");
+  let eventMinutes = document.querySelector(".minutes");
+  let eventSeconds = document.querySelector(".seconds");
+  function timer() {
+    if (eventSeconds.innerText != 0) {
+      eventSeconds.innerText--;
+    } else if (eventMinutes.innerText == 0 && eventSeconds.innerText == 0) {
+      eventHours.innerText--;
+      eventMinutes.innerText = 60;
+      eventSeconds.innerText = 59;
+      eventMinutes.innerText--;
+    } else if (eventMinutes.innerText != 0 && eventSeconds.innerText == 0) {
+      eventSeconds.innerText = 59;
+      eventMinutes.innerText--;
+    } else if (eventHours != 0 && eventMinutes == 0) {
+      eventMinutes.innerText = 59;
+      eventSeconds.innerText = 59;
+      eventHours.innerText--;
+    } else if (eventDays != 0 && eventHours == 0) {
+      eventDays.innerText--;
+    }
+  }
+  setInterval(timer, 1000);
+};
 
 // AU CAS OU ON A PLUSIEURS FONCTIONS
 const app = () => {
   navSlide();
   closeSlide();
   navColorChanging();
+  eventTimer();
 };
 
 // APPEL DE LA FONCTION APP POUR EFFECTUER TOUTES NOS FONCTIONS

@@ -10,6 +10,7 @@
         font-size: 60px;
         line-height: 66px;
     }
+
     h2 {
         font-family: 'Poppins', sans-serif;
         font-size: 90px;
@@ -78,7 +79,7 @@
 
 // LEARN MORE SECTION
 .learn-more {
-    @include grid($columns:3,$rows:1,$gap:20px);
+    @include grid($columns:3, $rows:1, $gap:10px);
     padding: 77px 0 133px;
 
     .card {
@@ -86,13 +87,15 @@
             border-radius: 10px;
             overflow: hidden;
             margin: 30px 10px 35px;
+
             img {
                 width: 100%;
                 border-radius: 10px;
             }
+
             &:hover img {
                 transform: scale(1.1);
-                transition: .3s all ease-in-out ;
+                transition: .3s all ease-in-out;
             }
         }
 
@@ -119,6 +122,318 @@
             &:hover {
                 color: $primary-color;
                 transition: .3s all ease-in-out;
+            }
+        }
+    }
+}
+
+// OUR MENU 
+.discover-menu {
+    text-align: center;
+    background: url(../assets/img/pattern2.png);
+    padding: 115px 0 120px;
+
+    .menu {
+        @include grid(3, 3, 20px);
+
+        .menu-category {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+
+            &:hover img {
+                transform: scale(1.1);
+                transition: .3s all ease-in-out;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+
+            a {
+                padding: 15px 25px;
+                background: rgba(255, 255, 255, 0.89);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 10px;
+                text-transform: uppercase;
+                letter-spacing: 3px;
+                font-weight: 500;
+                font-family: 'Poppins', sans-serif;
+                color: #333333;
+                font-size: 22px;
+
+                &:hover {
+                    background: $primary-color;
+                    color: white;
+                    transition: .3s all ease-in-out;
+                }
+            }
+        }
+
+        .long {
+            grid-row-end: span 2;
+        }
+
+        .stretched {
+            grid-column-end: span 2;
+        }
+    }
+}
+
+// UPCOMING EVENTS 
+.upcoming-events {
+    text-align: center;
+    padding: 115px 0 208px;
+    background: url('../../assets/img/bg-event-04.jpg');
+
+    .title {
+        color: white
+    }
+
+    .event-card {
+        @include flex;
+        border-radius: 10px;
+        border: 1px solid black;
+        height: 390px;
+        overflow: hidden;
+        position: relative;
+
+        .event-date {
+            transform: rotate(90deg);
+            background: $primary-color;
+            color: white;
+            padding: 15px;
+            position: absolute;
+            left: -546px;
+            width: 100%;
+
+        }
+
+        img {
+            width: 50%;
+            height: 100%;
+        }
+
+    }
+
+    .event-infos {
+        background: white;
+        height: 100%;
+        @include flex($direction:column);
+
+        h4 {
+            font-size: 22px;
+            font-weight: 500;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #222222;
+            margin: 0;
+        }
+
+        p {
+            line-height: 25.5px;
+            color: #666666;
+            width: 90%;
+            font-size: 15px;
+
+        }
+
+        .event-date-js {
+            margin: 40px 0 0;
+            @include flex($justify:space-around);
+            width: 90%;
+
+            .event-time {
+
+                font-size: 50px;
+                letter-spacing: 3px;
+                line-height: 55px;
+                font-weight: 700;
+                color: $primary-color;
+
+            }
+
+            .time-name {
+                font-size: 12px;
+                text-transform: uppercase;
+                font-weight: 700;
+                letter-spacing: 1px;
+                line-height: 18px;
+                color: #999999;
+            }
+
+            .days-ct {
+                @include flex($direction:column);
+
+            }
+
+            .hours-ct {
+                @include flex($direction:column);
+
+            }
+
+            .minutes-ct {
+                @include flex($direction:column);
+
+            }
+
+            .seconds-ct {
+                @include flex($direction:column);
+
+            }
+        }
+
+        a {
+            font-size: 12px;
+            color: #222222;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin: 40px 0 0;
+
+            &:hover {
+                color: $primary-color;
+                transition: .3s all ease-in-out;
+            }
+        }
+    }
+}
+
+// RESERVATION SECTION
+.reservation {
+    @include flex;
+
+    .book-table-ct {
+        @include flex($direction:column);
+    }
+}
+
+// CUSTOMER REVIEW
+.customer-review {
+    @include flex($direction:column);
+    text-align: center;
+    padding: 115px 0;
+
+    img {
+        border: 4px solid $primary-color;
+        border-radius: 50%;
+        width: 110px;
+    }
+
+    blockquote {
+        @include flex($direction:column);
+
+        p {
+            width: 70%;
+            font-size: 18px;
+            line-height: 30.6px;
+            color: #666666;
+            margin-bottom: 0;
+        }
+    }
+    .rating {
+        color: $primary-color;
+        font-size: 18px;
+       
+    }
+    figcaption {
+        margin: 32px 0 0;
+        color: #222222;
+        text-transform: uppercase;
+        font-size: 12px;
+        letter-spacing: 1px;
+    }
+
+}
+
+// OUR VIDEO SECTION
+.our-video {
+    text-align: center;
+    padding: 225px 0 250px;
+    background: url(../../assets/img/bg-cover-video-02.jpg)no-repeat center/cover fixed;
+    @include flex($direction:column);
+
+    .title {
+        color: white;
+    }
+    .play-btn {
+        padding: 30px;
+        background: white;
+        text-align: center;
+        margin: 13px 33px;
+        border-radius: 50%;
+
+        i {
+            color: #222222;
+        }
+
+        &:hover {
+            transform: scale(1.2);
+            background: #d61c22d0;
+            transition: .3s all ease-in-out;
+
+            i {
+                color: white;
+            }
+        }
+    }
+}
+
+// BLOG SECTION
+.blog {
+    text-align: center;
+    padding: 115px 0 123px;
+
+    .blog-cards {
+        @include grid($columns:3, $rows:1, $gap:10px);
+        text-align: left;
+
+        .card {
+            .img-ct {
+                border-radius: 10px;
+                overflow: hidden;
+                margin: 30px 10px 35px;
+    
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+    
+                &:hover img {
+                    transform: scale(1.1);
+                    transition: .3s all ease-in-out;
+                }
+            }
+    
+            h4 {
+                a {
+                    text-transform: uppercase;
+                    font-size: 22px;
+                    font-weight: 500;
+                    letter-spacing: 3px;
+                    color: #333333;
+                }
+            }
+    
+            p {
+                font-size: 15px;
+                color: #666666;
+                margin: 0 0 20px 0;
+            }
+    
+            a {
+                text-transform: uppercase;
+                color: #222222;
+                font-size: 12px;
+                letter-spacing: 1px;
+    
+                &:hover {
+                    color: $primary-color;
+                    transition: .3s all ease-in-out;
+                }
             }
         }
     }

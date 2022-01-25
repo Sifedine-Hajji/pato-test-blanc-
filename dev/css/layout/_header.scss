@@ -2,4 +2,5 @@ header {
     position: fixed;
     width: 100%;
     border-top: 5px solid $primary-color;
+    z-index: 5;
 }
