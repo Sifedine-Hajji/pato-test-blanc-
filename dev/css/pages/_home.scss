@@ -438,3 +438,145 @@
         }
     }
 }
+
+// FOOTER SECTION
+.newsletter-signup {
+    text-align: center;
+    padding: 85px 0;
+    background: url('../../assets/img/pattern1.png');
+
+    label {
+        font-family: 'Poppins', sans-serif;
+        font-size: 22px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        line-height: 33px;
+        text-transform: uppercase;
+        color: #333333;
+        padding: 0 20px 0 0;
+    }
+    input {
+        height: 46px;
+        width: 266px;
+        border: 1px solid #666666;
+        color: #666666;
+        border-radius: 10px; 
+        font-size: 14px;
+        line-height: 21px;
+        outline: none;
+    }
+    button {
+        font-size: 12px;
+        text-transform: uppercase;
+        background: black;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        width: 160px;
+        height: 40px;
+        margin-left: 15px;
+    }
+}
+
+.middle-ct {
+    background: #222222;
+    color: #999999;
+    @include flex;
+    padding: 40px 15px 70px;
+
+    h4 {
+        color: white;
+    }
+
+    .contact-openings-ct {
+        width: 400px;
+        margin-right: 20px;
+        h4 {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 20px;
+            text-transform: uppercase;
+            margin: 0 0 33px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 70px;
+
+            li {
+                margin: 0 0 14px; 
+                font-size: 13px;
+                i {
+                    padding-right: 10px;
+                }
+            }
+        }
+    }
+    .latest-tweets {
+        width: 400px;
+        margin-right: 20px;
+        font-size: 13px;
+
+        a {
+            color: $primary-color
+        }
+        h4 {
+            margin: 0 0 33px;
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 2px;
+            line-height: 19.5px;
+            text-transform: uppercase;
+        }
+
+        .tweet {
+            margin: 0 0 25px 0;
+            p {
+                margin: 0 0 18px 0;
+                font-size: 13px;
+                line-height: 22px;
+
+            }
+            span {
+                color: #555555;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+    }
+    .gallery {
+        @include grid(4,4,5px);
+        width: 400px;
+
+        h4 {
+            grid-column-end: span 4;
+        }
+        img {
+            width: 100%;
+        }
+    }
+}
+
+.credits {
+    background: #111111;
+    padding: 22px 0;
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+        color: white;
+
+        a {
+            color: #666666;
+        }
+
+        .footer-socials {
+            a {
+                color: white;
+            }
+        }
+
+    }
+}
