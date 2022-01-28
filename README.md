@@ -1,4 +1,4 @@
-# Pato (test blanc) Page
+# Pato (test blanc) Page.
 
 <hr>
 
