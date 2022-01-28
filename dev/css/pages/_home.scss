@@ -66,7 +66,7 @@
 
 // DISCOVER SECTION
 .discover {
-    background: url('../../assets/img/bg-intro-01.jpg') no-repeat center/cover fixed;
+    background: url('../assets/img/bg-intro-01.jpg') no-repeat center/cover fixed;
     padding: 135px 0 158px;
     text-align: center;
     @include flex-center-column;
@@ -188,7 +188,7 @@
 .upcoming-events {
     text-align: center;
     padding: 115px 0 208px;
-    background: url('../../assets/img/bg-event-04.jpg');
+    background: url('../assets/img/bg-event-04.jpg');
 
     .title {
         color: white
@@ -353,7 +353,7 @@
 .our-video {
     text-align: center;
     padding: 225px 0 250px;
-    background: url(../../assets/img/bg-cover-video-02.jpg)no-repeat center/cover fixed;
+    background: url('../assets/img/bg-cover-video-02.jpg')no-repeat center/cover fixed;
     @include flex($direction:column);
 
     .title {
@@ -443,7 +443,7 @@
 .newsletter-signup {
     text-align: center;
     padding: 85px 0;
-    background: url('../../assets/img/pattern1.png');
+    background: url('../assets/img/pattern1.png');
 
     label {
         font-family: 'Poppins', sans-serif;
